@@ -1,0 +1,21 @@
+{
+  "name": "app_back_end",
+  "version": "1.0.0",
+  "description": "Mock data for the etap app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bennick",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "nodemon": "^3.0.1",
+    "yarn": "^1.22.19"
+  }
+}
