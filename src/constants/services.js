@@ -22,3 +22,4 @@ export const FRANCHISE_WALLETS = '/api/franchise_wallets';
 export const ALL_SERVICES = '/api/services';
 export const SERVICE_CATEGORIES = '/api/active_service_categories';
 export const SERVICE_CATEGORY_BILLERS = '/api/service_category_billers';
+export const SERVICE_BILLERS = '/api/service_billers';

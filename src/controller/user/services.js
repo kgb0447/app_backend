@@ -1,6 +1,6 @@
 import { Router } from "express"
-import { ALL_SERVICES, SERVICE_CATEGORIES, SERVICE_CATEGORY_BILLERS } from "../../constants/services.js";
-import { getBillers, getActiveServiceCategories, getServices } from "../../model/db/servicesCategories.js";
+import { ALL_SERVICES, SERVICE_BILLERS, SERVICE_CATEGORIES, SERVICE_CATEGORY_BILLERS } from "../../constants/services.js";
+import { getBillers, getActiveServiceCategories, getServices, getBillerForService } from "../../model/db/servicesCategories.js";
 
 const service_route = Router();
 
@@ -31,5 +31,13 @@ service_route.post(SERVICE_CATEGORY_BILLERS, async (req, res) => {
     }
 })
 
+service_route.post(SERVICE_BILLERS, async (req, res) => {
+    try {
+        const result = await getBillerForService(req.body);
+        res.send(result)
+    } catch(err) {
+        console.log(err)
+    }
+})
 
 export default service_route;
